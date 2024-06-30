@@ -1,0 +1,287 @@
+body,
+html {
+    font-family: 'Montserrat', sans-serif !important;
+    height: 100%;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+
+}
+
+/*  */
+
+:root {
+    --color_verde: #007F73;
+    --color_verde_claro: #4CCD99;
+    --color_negro: black;
+    --color_blanco: whitesmoke;
+    --color_gris_oscuro: rgb(77, 76, 76);
+}
+
+.main {
+    background-color: var(--color_blanco);
+}
+
+.promo {
+    top: 0px;
+    background-color: var(--color_negro);
+    color: var(--color_blanco);
+    height: 2, 5vh;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    line-height: 15px;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color_verde);
+    animation-name: animation-mouse-over;
+    animation-duration: 0.5s;
+    font-size: 1.05rem;
+}
+
+.container-header {
+    padding: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.container-header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.pcenter {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 1vh;
+    /*esto lo agregué yo ahora */
+}
+
+.pleft {
+    text-align: left;
+    padding-left: 0%;
+}
+
+.section1 {
+    background-image: url("./img/section1.jpg");
+    height: 100%;
+    position: relative;
+    opacity: 0.97;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.section2 {
+    background-color: var(--color_blanco);
+    width: 100%;
+    min-height: 250px;
+    padding-top: 10px;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "content";
+}
+
+.content {
+    grid-area: content;
+    text-align: center;
+    margin: 5%;
+}
+
+
+.logo {
+    width: 200px;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--color_blanco);
+    text-transform: uppercase;
+}
+
+h2 {
+    color: var(--color_verde);
+    margin: 0px;
+}
+
+.locales { /* ESTA ERA SECTION3 PERO AHORA ES LOCALES */
+    background-color:var(--color_verde_claro);
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0% 20% 5% 25%;
+}
+
+.section3 {
+    display: grid;
+    grid-template-areas:
+        'item1 item2 item3';
+    background-color: var(--color_verde_claro);
+}
+
+.item1 {
+    grid-area: item1;
+    color: var(--color_blanco);
+}
+
+.item2 {
+    grid-area: item2;
+    color: var(--color_blanco);
+}
+
+.item3 {
+    grid-area: item3;
+    color: var(--color_blanco);
+}
+
+.section4 {
+    background-image: url("./img/formulario.jpg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.section4-content {
+    margin: auto;
+    width: 50%;
+}
+
+
+
+ p {
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+ol {
+    text-align: left;
+    padding-left: 20%;
+} 
+
+.section3>div {
+    text-align: center;
+    margin: 10%;
+}
+
+.section3-titles {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #007F73;
+    padding: 5px;
+}
+
+.section4 {
+    background-image: url("./img/formulario.jpg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.section4-content {
+    margin: auto;
+    width: 50%;
+}
+
+/* Footer */
+
+footer {
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+footer>div {
+    margin: 5px;
+}
+
+.iconos {
+    height: 4vh;
+}
+
+
+
+@keyframes animation-mouse-over {
+    from {
+        font-size: 1rem;
+    }
+
+    to {
+        font-size: 1.05rem;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    .logo {
+        width: 130px;
+        padding-bottom: 20px;
+    }
+
+    .container-header {
+        text-align: center;
+    }
+
+    .container-header-nav {
+        flex-direction: column;
+    }
+
+
+
+    nav a:hover,
+    nav a:focus {
+        animation-name: none;
+        animation-duration: 0.5s;
+        font-size: 1rem;
+    }
+
+    .section3 {
+        grid-template-areas:
+            'item1'
+            'item2'
+            'item3';
+    }
+
+}
